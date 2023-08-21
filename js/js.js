@@ -20,5 +20,12 @@
 //       }
 // });
 
+const hamburger = document.querySelector('.hamburger-lines');
+const mobileNav = document.querySelector('.nav-links-mobile');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('transform');
+    mobileNav.classList.toggle('transform');
+});
 
 

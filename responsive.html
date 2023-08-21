@@ -15,7 +15,6 @@
 
         <nav>
             <div class="mobile-nav">
-                <input class="checkbox" type="checkbox" name="" id="" />
                 <div class="hamburger-lines">
                     <span class="line line1"></span>
                     <span class="line line2"></span>
@@ -50,20 +49,37 @@
 
     <main>
         <div class="title">
-            <h2 id="main">Introduction to Web Design</h2>
+            <h2 id="main">Responsive Design</h2>
         </div>
 
         <div class="text">
-            <p>This site is a companion for the Introduction to Web Design course. The four main topics we will cover are HTML5 (creating the content for your site), CSS3 (styling your site), JavaScript (adding some interactive features), and Responsive Design (making sure your site looks good on smartphones, tablets, laptops, and PCs). The focus is on best practices and accessibility.</p>
+            <p>What is responsive design? It is designing your page layout to reflect the size and capabilities of the device being used to look at the page. Have you ever visited a site from your phone just to find out you can't access important information? This means the site is not responsive.</p>
 
-            <p>The best way to learn web design is with hands-on learning, so while this site looks good (at least I hope so), it is possible for you to see what the site looked like through each of the four steps.</p>
+            <div class="responsive-grid">
+                <div class="css-container">
+                    <i class="fa fa-mobile fa-2x"></i>
+                    <div class="css-text">
+                        <p><strong>Mobile</strong></p>
+                        <p>The key to having a great page is to design "mobile-first." This means that you should make sure that your page has all of the necessary functionalities when viewed on an extra small screen.</p>
+                    </div>
+                </div>
 
-            <ol>
-                <li>Just the <a href="index-html-only.html">HTML</a></li>
-                <li>Adding <a href="index-mobile-stiling.html">mobile styling</a> using CSS</li>
-                <li>Completing the CSS styling for <a href="index-complete-styling">tablet and computer views</a></li>
-                <li>Adding <a href="javascript-scroll.html">JavaScript</a> to create an interactive scroll and photo gallery</li>
-            </ol>
+                <div class="css-container">
+                    <i class="fa fa-tablet fa-2x"></i>
+                    <div class="css-text">
+                        <p><strong>Tablet</strong></p>
+                        <p>The larger screen of tablets allows you to modify the layout to provide a different experience for your users. An example? A navigation bar that stretches across the width of the screen.</p>
+                    </div>
+                </div>
+
+                <div class="css-container">
+                    <i class="fa fa-laptop fa-2x"></i>
+                    <div class="css-text">
+                        <p><strong>PCs and Desktops</strong></p>
+                        <p>When people are viewing your page from a large screen you can consider adding some elements that want to avoid on the mobile view, e.g. photo carousels, large videos, etc.</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </main>

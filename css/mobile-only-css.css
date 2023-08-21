@@ -75,7 +75,8 @@ a.skip:hover {
 }
 
 .active {
-    border-bottom: 4px #7CABF2 solid;
+    border-bottom: #7CABF2 4px solid;
+
 }
 
 /* Hamburger styling */
@@ -97,11 +98,6 @@ nav {
 nav .nav-links-mobile {
     display: flex;
     background-color: #f5f5f5;
-    transform: translateX(-100%);
-}
-
-nav .nav-links-mobile.transform {
-    transform: translateX(0); /* Slide in the menu */
 }
 
 nav .mobile-nav li {
@@ -143,10 +139,6 @@ nav .nav-links a:hover{
     justify-content: space-between;
 }
 
-.mobile-nav .hamburger-lines:hover {
-    cursor: pointer;
-}
-
 .mobile-nav .hamburger-lines .line {
     display: block;
     height: 4px;
@@ -167,19 +159,6 @@ nav .nav-links a:hover{
 .mobile-nav .hamburger-lines .line3 {
     transform-origin: 0% 100%;
     transition: transform 0.4s ease-in-out;
-}
-
-/* new */
-.mobile-nav .hamburger-lines.transform .line1 {
-    transform: rotate(45deg);
-}
-
-.mobile-nav .hamburger-lines.transform .line2 {
-    transform: scaleY(0);
-}
-
-.mobile-nav .hamburger-lines.transform .line3 {
-    transform: rotate(-45deg);
 }
 
 nav .nav-links-mobile {
@@ -292,13 +271,6 @@ strong {
     display: grid;
     grid-template-columns: 1fr 10fr;
     row-gap: 30px;
-    column-gap: 10px;
-}
-
-/* responsive page styling */
-.responsive-grid {
-    display: grid;
-    row-gap: 20px;
 }
 
 /* footer */
@@ -315,66 +287,4 @@ footer {
     display: flex;
     flex-direction: row;
     column-gap: 20px;
-}
-
-@media screen and (min-width: 600px){
-    h1 {
-        font-size: 42px;
-    }
-    .nav-links-web {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        list-style:none;
-    }
-
-    .mobile-nav {
-        display: none;
-    }
-
-    .WD4E {
-        position:unset;
-    }
-
-    main {
-        padding: 5vw;
-    }
-}
-
-@media screen and (min-width: 950px){
-    nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-
-    }
-
-    .nav-links-web {
-        width: 70%;
-        margin-top: 10px;
-    }
-
-    main {
-        padding: 5vw 15vw 5vw 20vw;
-    }
-
-    p, li, a {
-        font-size: 20px;
-    }
-
-    .html-grid {
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-    }
-
-    .css-grid {
-        grid-template-columns: 1fr 1fr;
-        column-gap: 20px;
-    }
-
-    .responsive-grid {
-        grid-template-columns: 1fr 1fr 1fr;
-        column-gap: 20px;
-    }
 }
