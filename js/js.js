@@ -1,25 +1,4 @@
-// document.addEventListener("DOMContentLoaded", function() {
-//     console.log("Connected");
-
-//     window.onscroll = function() {
-//         scrollFunction();
-//     };
-
-//     function scrollFunction() {
-//         let width = screen.width;
-//         if ((document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) && (width > 600)) {
-//           console.log("scrolling")
-//           document.querySelector('.WD4E').style.display = "flex";
-//           document.querySelector('nav').style.position = "fixed";
-//           document.querySelector('nav').style.top = "0px";
-//         } else {
-//           console.log("I'm too small to scroll")
-//           document.querySelector(".WD4E").style.display = "flex";
-//           document.querySelector('nav').style.position = "unset";
-//         }
-//       }
-// });
-
+console.log('js linked')
 const hamburger = document.querySelector('.hamburger-lines');
 const mobileNav = document.querySelector('.nav-links-mobile');
 
@@ -33,5 +12,38 @@ const wd4e = document.querySelector('.WD4E');
 wd4e.addEventListener('click', function() {
   window.location.href = 'index.html'; 
 });
+
+(function() {
+
+    const buttons = document.querySelectorAll('.btn');
+    const storeImages = document.querySelectorAll('.isotope-item');
+
+    const allButton = document.querySelector('.btn[data-filter="all"]');
+    allButton.classList.add('active');
+
+    buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+            console.log('button was clicked');
+
+            const filter = button.dataset.filter;
+
+            storeImages.forEach((item) => {
+                if (filter === 'all' || item.classList.contains(filter)) {
+                    item.style.opacity = '1'; // Fade in
+                    item.style.display = 'flex'; // Show the element
+                } else {
+                    item.style.opacity = '0'; // Fade out
+                    item.style.display = 'none'; // Hide the element
+                }
+            });
+
+            buttons.forEach((btn) => {
+                btn.classList.remove('active');
+            });
+
+            button.classList.add('active');
+        });
+    });
+})();
 
 
