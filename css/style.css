@@ -74,6 +74,10 @@ a.skip:hover {
     transition: 0.3s;
 }
 
+.WD4E:hover {
+    cursor:pointer;
+}
+
 .active {
     border-bottom: 4px #7CABF2 solid;
 }

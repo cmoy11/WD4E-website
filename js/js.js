@@ -28,4 +28,10 @@ hamburger.addEventListener('click', () => {
     mobileNav.classList.toggle('transform');
 });
 
+const wd4e = document.querySelector('.WD4E');
+
+wd4e.addEventListener('click', function() {
+  window.location.href = 'index.html'; 
+});
+
 
