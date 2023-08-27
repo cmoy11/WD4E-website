@@ -52,8 +52,11 @@ p, li {
 
 a {
     color: #000;
-    text-decoration: none;
     font-size: 18px;
+}
+
+.nav-links a {
+    text-decoration: none;
 }
 
 /* nav styling */
@@ -527,20 +530,19 @@ footer {
 
 .top {
     background-color: #7CABF2;
-    color: #fff;
+    color: #000;
     border: 2px solid #000;
     border-radius: 50px;
     position: sticky;
-    right: 20px !important;
+    left: 75vw;
     bottom: 20px; 
-    width: 100px;
+    width: 120px;
     padding: 10px;
     text-align: center;
 }
 
 .top:hover {
     background-color: #fff;
-    color: #000;
 }
 
 @media screen and (min-width: 600px) {
