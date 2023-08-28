@@ -14,37 +14,20 @@ wd4e.addEventListener('click', function() {
   window.location.href = 'index.html'; 
 });
 
-(function() {
+var acc = document.getElementsByClassName("accordion");
+var i;
+console.log(acc)
 
-    const buttons = document.querySelectorAll('.btn');
-    const storeImages = document.querySelectorAll('.isotope-item');
-
-    const allButton = document.querySelector('.btn[data-filter="all"]');
-    allButton.classList.add('active');
-
-    buttons.forEach((button) => {
-        button.addEventListener('click', () => {
-            console.log('button was clicked');
-
-            const filter = button.dataset.filter;
-
-            storeImages.forEach((item) => {
-                if (filter === 'all' || item.classList.contains(filter)) {
-                    item.style.opacity = '1'; // Fade in
-                    item.style.display = 'flex'; // Show the element
-                } else {
-                    item.style.opacity = '0'; // Fade out
-                    item.style.display = 'none'; // Hide the element
-                }
-            });
-
-            buttons.forEach((btn) => {
-                btn.classList.remove('active');
-            });
-
-            button.classList.add('active');
-        });
-    });
-})();
-
-
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    console.log('Button Clicked')
+    this.classList.toggle("acc-active");
+    var panel = this.nextElementSibling;
+    console.log(panel.classList)
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
