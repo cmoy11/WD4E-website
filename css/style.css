@@ -500,6 +500,7 @@ footer {
     display: flex;
     flex-direction: column;
     row-gap: 20px;
+    padding-top: 20px;
 }
 
 .resource-code {
@@ -547,7 +548,7 @@ footer {
 
 /* Accordion */
 /* Style the buttons that are used to open and close the accordion panel */
-.accordion {
+/* .accordion {
     background-color: #eee;
     color: #444;
     cursor: pointer;
@@ -557,32 +558,71 @@ footer {
     border: none;
     outline: none;
     transition: 0.4s;
-}
+} */
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.acc-active, .accordion:hover {
+/* .acc-active, .accordion:hover {
     background-color: #ccc;
-}
+} */
 
 /* Style the accordion panel. Note: hidden by default */
-.panel {
+/* .panel {
     padding: 0 18px;
     background-color: white;
     display: none;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-}
+} */
 
-.accordion:after {
-    content: '\02795'; /* Unicode character for "plus" sign (+) */
+/* .accordion:after {
+    content: '\02795';
     font-size: 13px;
     color: #777;
     float: right;
     margin-left: 5px;
+} */
+
+/* .acc-active:after {
+    content: "\2796";
+} */
+
+.accordion {
+max-width: 420px;
+text-align: left;
 }
 
-.acc-active:after {
-    content: "\2796"; /* Unicode character for "minus" sign (-) */
+article {
+border: 1px solid #fff;
+padding: 1em;
+margin: 1em auto;
+}
+
+input[type="radio"] {
+    appearance: none;
+    position: fixed;
+    top: -100vh; left: -100vh;
+
+    & ~ div {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+
+    &:checked ~ div {
+        max-height: 200px;
+    }
+}
+
+.accordion-h4 {
+    display: inline;
+    border: none;
+}
+
+details {
+    border-left: 4px solid #C5A9F9;
+    padding: 10px;
+    margin: 0px 0px 20px 0px;
+    border-bottom: 2px #f5f5f5 solid;
 }
 
 @media screen and (min-width: 600px) {
