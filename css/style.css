@@ -313,6 +313,10 @@ p a:hover, .code a:hover {
     text-align: center;
 }
 
+.code p:first-child {
+    font-weight: 700;
+}
+
 /* css page styling */
 strong {
     font-weight: 700;
