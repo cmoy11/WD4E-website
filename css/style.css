@@ -313,7 +313,7 @@ p a:hover, .code a:hover {
     text-align: center;
 }
 
-.code p:first-child {
+.code > p:first-child {
     font-weight: 700;
 }
 
@@ -332,6 +332,11 @@ strong {
     grid-template-columns: 1fr 10fr;
     row-gap: 30px;
     column-gap: 10px;
+    justify-content: center;
+}
+
+.css-container > i {
+    justify-self: center;
 }
 
 /* responsive page styling */
@@ -354,6 +359,12 @@ footer {
     display: flex;
     flex-direction: row;
     column-gap: 20px;
+    justify-content: center;
+}
+
+.icons > img {
+    width: 7%;
+    border-radius: 10px;
 }
 
 /* JavaScrip Page Styling */
